@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import api from "../api/api";
+import Home from "./Home";
 
 const Dashboard = () => {
   const [modules, setModules] = useState([]);
@@ -63,18 +64,13 @@ const Dashboard = () => {
   }, []);
 
   return (
-    <div
-      style={{
-        padding: "20px",
-        userSelect: "none", // Disable text selection
-      }}
-    >
-      <h1>{courseTitle}</h1>
-      <ul>
+    <div>
+      <Home />
+      {/* <ul>
         {modules.map((mod, idx) => (
           <li key={idx}>{mod}</li>
         ))}
-      </ul>
+      </ul> */}
     </div>
   );
 };
